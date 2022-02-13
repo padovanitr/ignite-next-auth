@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react"
-import { withSSRAuth } from "../../utils/withSSRAuth"
+import { withSSRAuth } from "../utils/withSSRAuth"
 import { AuthContext } from "../contexts/AuthContext"
 import { setupAPIClient } from "../services/api"
 import { api } from "../services/apiClient"
