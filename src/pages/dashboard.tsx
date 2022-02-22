@@ -3,15 +3,10 @@ import { withSSRAuth } from "../utils/withSSRAuth"
 import { AuthContext } from "../contexts/AuthContext"
 import { setupAPIClient } from "../services/api"
 import { api } from "../services/apiClient"
-import { useCan } from "../hooks/useCan"
 import { Can } from "../components/Can"
 
 export default function Dashboard(){
     const { user } = useContext(AuthContext)
-
-    const userCanSeeMetrics = useCan({
-        roles: ['administrator']
-    })
 
     useEffect(() => {
         api.get('/me')
