@@ -11,7 +11,7 @@ export function useCan({ permissions, roles}: useCanParams){
 
     if (!isAthenticated) {
         return false;
-    }
+    } 
 
     if (permissions?.length > 0) {
         const hasAllPermissions = permissions.every(permission => {
